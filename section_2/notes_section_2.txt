@@ -1,0 +1,7 @@
+# Basic syntax and functions
+    dive into core syntax
+    variables and data types
+    operators
+    explore and use functions.
+
+# Seting up the project
