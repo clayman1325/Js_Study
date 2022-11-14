@@ -5,3 +5,18 @@
     explore and use functions.
 
 # Seting up the project
+    First download the scaffold of the calculator project from the Udemy course.
+
+    verify that the html is working fine and add a app.js file in scripts to add more js functionalities.
+        to BEGIN with try only one alert mesage that will pop up when the calculator renders
+
+        to do that there exist different ways using the <script> tag and appending the code between its open and close tags. However
+        that is not a good practices as long as it wont be clean nor easy to mantain when the js growths. And because now a days JS
+        can growth significantly its prefere to split all the js code separate from the HTML or css code and import it (unless the amount of code
+        is short as it should be in framewokrs such as React or Vue js).
+
+        In this case what can be done is inject the JS code to the html throuhg importing the app.js file in the scripts folder in the HTML index
+        file seting the correct url in src attribute of the <script> tagg.
+
+        commit: 46635835b1f4f79094ea60d7ec47a370dc936529
+
