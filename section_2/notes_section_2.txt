@@ -20,3 +20,23 @@
 
         commit: 46635835b1f4f79094ea60d7ec47a370dc936529
 
+# Variables
+    What is allowed and what is not allowed
+    Describe what the variable stores
+    camel case  and case sensitive.
+    only letters and digits
+    $ is allowed (weird though)
+    _ is allowed not so weird.
+
+    let currentResult;  // This variable is declared but not defined or initialized
+
+    ; is the symbol to end the line of a word or sentence.
+
+# operators
+    syntax that allow us to manipulate variables values.
+
+
+# Numbers
+    integers
+    float
+    strings  '' "" ``
