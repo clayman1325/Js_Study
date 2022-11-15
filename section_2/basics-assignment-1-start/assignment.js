@@ -1,4 +1,4 @@
-let initialImput = 0;
+const initialImput = 0;
 let result       = initialImput + 18
 
 result = result - 3;

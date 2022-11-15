@@ -51,5 +51,24 @@
     variables that could not change its value.
 
 
+1st assigment
+
+commit: 42b3d58e1d2618e09c0368c6da1ae266c7d6e174
+
+# Functions
+    Code on de mand
+    define a code that can be reused in the future,
+        take parameters, has body that will execute something and returns a value.
+
+    The code of a function only gets run when the function has been sent.
+
+    allow to brake the top bottom logic of the code run and allow us to run code only when something happened.
+    such as events of the user like the click of a button or going ot a new page.
+
+# code styles
+    There is a difference between working correct code and wirting readable code. The first one looks to avoid syntax errors and writing readable, properly formatted code.
+
+    whitespacces line breaks and identation are totally optional.
+
 
 
