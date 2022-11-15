@@ -40,3 +40,16 @@
     integers
     float
     strings  '' "" ``
+        string contatenation is done using ` ${ } ` backticks and operators that can be called template literal.
+        '\ ' a backslash scapes the meaning of the followin character to add special characters to a string
+        such as backspace \n etc
+
+
+    commit: 18fdd82cd47ef2464cec500bc3412abb49f7c121\
+
+# Constant
+    variables that could not change its value.
+
+
+
+
