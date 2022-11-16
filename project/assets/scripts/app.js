@@ -1,19 +1,42 @@
 const initialValue = 0;
 let currentResult = initialValue;
-currentResult = currentResult + 10;
+let enteredNumber;
+let calcDescription;
 
-function add (num1, num2) {
-    const result = num1 + num2;
-    return result
+function getUserInputNumer () {
+    return  parseInt(userInput.value);
 }
 
-let userName = "david"
-function greetUser(name) {
-    let userName = "fernando";
-    alert(`Hi ${userName} how are ypu doing today?`)
+function createAndWriteOutput(operator, prevResult, enteredNumber) {
+    const calcDescription = `${prevResult} ${operator} ${enteredNumber}`; 
+    outputResult(currentResult, calcDescription);
 }
-currentResult = add(10,2);
-greetUser(userName)
-let calculationDescription = `Current + Result ${initialValue}`
-let errorMessage = "An error " + "occurred"
-outputResult(currentResult, calculationDescription)
+
+function add () {
+    enteredNumber = getUserInputNumer();
+    currentResult += enteredNumber
+    createAndWriteOutput('+', currentResult, enteredNumber )
+};
+
+function substract () {
+    enteredNumber = getUserInputNumer();
+    currentResult -= enteredNumber;
+    createAndWriteOutput('-', currentResult, enteredNumber )
+}
+
+function multiply() {
+    enteredNumber = getUserInputNumer();
+    currentResult = currentResult * enteredNumber;
+    createAndWriteOutput('*', currentResult, enteredNumber )
+}
+
+function divide() {
+    enteredNumber = getUserInputNumer();
+    currentResult = currentResult / enteredNumber;
+    createAndWriteOutput('/', currentResult, enteredNumber )
+}
+
+addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', substract);
+multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', divide);
