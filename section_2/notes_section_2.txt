@@ -65,10 +65,27 @@ commit: 42b3d58e1d2618e09c0368c6da1ae266c7d6e174
     allow to brake the top bottom logic of the code run and allow us to run code only when something happened.
     such as events of the user like the click of a button or going ot a new page.
 
+    A function can be called indirectly if the function is passed by argument. This means that you want to send the function elsewere in the code and dont want to exectute inmediately. In such cases the funcion is sent and the
+    execution of the funcion happens inside the other function with the paramenters and values of that future moment.
+
 # code styles
     There is a difference between working correct code and wirting readable code. The first one looks to avoid syntax errors and writing readable, properly formatted code.
 
     whitespacces line breaks and identation are totally optional.
+
+
+
+# Convert data types
+    because JS is weekly typed and everything that comes from user imputs is tretaed as a string input iit is necesary
+    to parse the value to integeger or float when the desired input value is a number.
+
+    to do this parseInt(stringValue) or parseFloat(stringValue) help to do the task.
+
+# Spliot code into functions
+    FOllowing the develppment of the calculator it is necessary to read information from the user and manipulate that data to show the corresponding desired value regarding the operation that the user selects. In order to get the value from the user javascriot provides a method called document.getElementById("id") in order to fetch the data from the HTML elements that has the id "id". To recognize which operation the user want to perform is necessary to detect which button does the user clicled. To do so an event listener is attached to each button like this
+    BtnName.addEventListener('click', function); where BtnName corresponds to the HTML element of the button wth on particular operation sign asigned. The "click" is the Javascriot method that look for click in that element and triggers the funcion associated in function argument.
+
+    once you finis adding the diferent set of 4 operations methods and the corresponding valies for the description calculation it is a good practice to once the code is functional check if it could look better performing one refactor.
 
 
 
