@@ -3,6 +3,8 @@ let currentResult = initialValue;
 let enteredNumber;
 let calcDescription;
 
+let logEntries = [];
+
 function getUserInputNumer () {
     return  parseInt(userInput.value);
 }
@@ -12,28 +14,54 @@ function createAndWriteOutput(operator, prevResult, enteredNumber) {
     outputResult(currentResult, calcDescription);
 }
 
+function writeToLog(
+    operationIdentifier,
+    prevResult,
+    newResult
+ ) {
+    const logEntry = {
+        operation: operationIdentifier,
+        prevResult:     prevResult,
+        currentResult: newResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
+ }
+
 function add () {
-    enteredNumber = getUserInputNumer();
-    currentResult += enteredNumber
-    createAndWriteOutput('+', currentResult, enteredNumber )
+    const operator = "+";
+    const enteredNumber = getUserInputNumer();
+    const initialRresult = currentResult;
+    currentResult += enteredNumber;
+    createAndWriteOutput(operator, currentResult, enteredNumber );
+    writeToLog(operator, initialRresult, currentResult)
 };
 
 function substract () {
-    enteredNumber = getUserInputNumer();
+    const operator = "-";
+    const enteredNumber = getUserInputNumer();
+    const initialRresult = currentResult;
     currentResult -= enteredNumber;
-    createAndWriteOutput('-', currentResult, enteredNumber )
+    createAndWriteOutput(operator, currentResult, enteredNumber );
+    writeToLog(operator, initialRresult, currentResult)
 }
 
 function multiply() {
-    enteredNumber = getUserInputNumer();
-    currentResult = currentResult * enteredNumber;
-    createAndWriteOutput('*', currentResult, enteredNumber )
+    const operator = "*";
+    const enteredNumber = getUserInputNumer();
+    const initialRresult = currentResult;
+    currentResult *= enteredNumber;
+    createAndWriteOutput(operator, currentResult, enteredNumber );
+    writeToLog(operator, initialRresult, currentResult)
 }
 
 function divide() {
-    enteredNumber = getUserInputNumer();
-    currentResult = currentResult / enteredNumber;
-    createAndWriteOutput('/', currentResult, enteredNumber )
+    const operator = "/";
+    const enteredNumber = getUserInputNumer();
+    const initialRresult = currentResult;
+    currentResult /= enteredNumber;
+    createAndWriteOutput(operator, currentResult, enteredNumber );
+    writeToLog(operator, initialRresult, currentResult)
 }
 
 addBtn.addEventListener('click', add);

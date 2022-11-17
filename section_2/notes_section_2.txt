@@ -33,7 +33,7 @@
     ; is the symbol to end the line of a word or sentence.
 
 # operators
-    syntax that allow us to manipulate variables values.
+    syntax that allow us to manipulate variables values. Such as math operator or += ++ etc.
 
 
 # Numbers
@@ -86,6 +86,21 @@ commit: 42b3d58e1d2618e09c0368c6da1ae266c7d6e174
     BtnName.addEventListener('click', function); where BtnName corresponds to the HTML element of the button wth on particular operation sign asigned. The "click" is the Javascriot method that look for click in that element and triggers the funcion associated in function argument.
 
     once you finis adding the diferent set of 4 operations methods and the corresponding valies for the description calculation it is a good practice to once the code is functional check if it could look better performing one refactor.
+
+# More data Types.
+    Booleans:  Has only two posible values. True or False.
+
+    Objects: Allow to  organize and group data together in key value particular
+
+    Array:   List of data  of any data
+
+    null  / undefined / NaN:
+        undifined: uninitialized variables
+        null: there is no data never assumed by default. Set value regularly
+        NaN: Not a number. It is similar to an error message.
+
+        typeof is a keyword that is defined in java scriot to check the tyoe fo a variable.
+
 
 
 
