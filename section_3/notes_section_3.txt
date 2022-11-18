@@ -1,0 +1,25 @@
+# Debuggin and efficient development
+
+## Get Unstuck and stay productive
+
+    how to write code efficiently
+        work in a productive environmente
+            IDE to the full potential
+                shortcus
+                autocompletion
+                editor extensions
+
+    find help
+        work with MDN ref documentation
+        ecma script standard
+        learn how to google.
+            start with prog lang and then describe problem with key works not sentences,
+        ask proper questions
+        trial and error
+
+    DEBUG YOUR CODE.
+        1. code error when app crash.
+            if there is an error message focus and read error message or google it.
+
+        2. logic errors (beheavior)
+        Use console log to follow the flow or execution of the program.
