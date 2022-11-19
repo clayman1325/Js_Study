@@ -34,6 +34,8 @@ function writeToLog(
     const enteredNumber = getUserInputNumer();
     const initialRresult = currentResult;
 
+    if (!enteredNumber) { return; }
+
     if(calculationType == "ADD") {
         currentResult += enteredNumber;
         mathOperator = "+"
@@ -47,7 +49,7 @@ function writeToLog(
         currentResult /= enteredNumber;
         mathOperator = "/"
     } else {
-
+        return;
     }
     createAndWriteOutput(mathOperator, currentResult, enteredNumber );
     writeToLog(operator, initialRresult, currentResult)
