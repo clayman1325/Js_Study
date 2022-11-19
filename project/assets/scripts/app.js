@@ -28,40 +28,45 @@ function writeToLog(
     console.log(logEntries);
  }
 
-function add () {
-    const operator = "+";
+ function calculateResult(calculationType) {
+    let mathOperator;
+    const operator = calculationType;
     const enteredNumber = getUserInputNumer();
     const initialRresult = currentResult;
-    currentResult += enteredNumber;
-    createAndWriteOutput(operator, currentResult, enteredNumber );
+
+    if(calculationType == "ADD") {
+        currentResult += enteredNumber;
+        mathOperator = "+"
+    } else if (calculationType == "SUBSTRACT") {
+        currentResult -= enteredNumber;
+        mathOperator = "-"
+    } else if (calculationType == "MULTIPLY") {
+        currentResult *= enteredNumber;
+        mathOperator = "*"
+    } else if (calculationType == "DIVIDE") {
+        currentResult /= enteredNumber;
+        mathOperator = "/"
+    } else {
+
+    }
+    createAndWriteOutput(mathOperator, currentResult, enteredNumber );
     writeToLog(operator, initialRresult, currentResult)
+ }
+
+function add () {
+    calculateResult("ADD")
 };
 
 function substract () {
-    const operator = "-";
-    const enteredNumber = getUserInputNumer();
-    const initialRresult = currentResult;
-    currentResult -= enteredNumber;
-    createAndWriteOutput(operator, currentResult, enteredNumber );
-    writeToLog(operator, initialRresult, currentResult)
+    calculateResult("SUBSTRACT")
 }
 
 function multiply() {
-    const operator = "*";
-    const enteredNumber = getUserInputNumer();
-    const initialRresult = currentResult;
-    currentResult *= enteredNumber;
-    createAndWriteOutput(operator, currentResult, enteredNumber );
-    writeToLog(operator, initialRresult, currentResult)
+    calculateResult("MULTIPLY")
 }
 
 function divide() {
-    const operator = "/";
-    const enteredNumber = getUserInputNumer();
-    const initialRresult = currentResult;
-    currentResult /= enteredNumber;
-    createAndWriteOutput(operator, currentResult, enteredNumber );
-    writeToLog(operator, initialRresult, currentResult)
+    calculateResult("DIVIDE")
 }
 
 addBtn.addEventListener('click', add);
