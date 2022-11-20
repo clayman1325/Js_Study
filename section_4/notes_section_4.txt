@@ -1,0 +1,33 @@
+# Section 4th: Working with control structures
+
+## Conditional statements
+    Conditional code execution allow to alter the linear and top to buttom flow of a program and create diferent path execution outcomes depending on certain conditions defined in the conditional statements.
+
+
+    A conditional statement is defined by the key word if and a sentence that should return true or false. If the returned value is true the code that will be executed is inside the if block  { } in JS, and if the result is false the program will skip the if block execution {}.
+
+    in js there is an aditional distinction in the comparisson symbols
+    if you use == checks for value only
+    if you use === checks for value and type. Always recomended.
+
+    In the calculator project it is shown how the if else statements and a refactor
+    allowed to clean the code make it reusable and way much better to understand
+
+    see commit: 8887d4c35bef1b14fef93f7007fb9beebca6f42b
+
+    ## Falsy and truthy values
+
+    In JS sometimes you evaluate expresions that are not just boolean values but still can produce a result in a conditional statement. This is because the conditionals in Javascript also evaluate for truthy or falsy values.
+
+    This happens becase it gives the possibility to check the validity of an expresion or variable with out adding more operatiors like checking the type. for example:
+
+    Assume a variable  name = "max" and a conditional if(name). Because there is no logic operator in place the only question that can be answer in the if statement is if the value of name is valid or not or if it is at least not false value.
+
+    Same happen with falsy values such as 0 => false.
+    falsy values:
+        * 0
+        * ""
+        * null undefined NaN
+## Loops in JS
+
+## Error handling.
