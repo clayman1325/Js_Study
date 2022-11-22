@@ -29,9 +29,35 @@
         * ""
         * null undefined NaN
 
-    ## note in Statement and expresions
+    ### note in Statement and expresions
         * expresion is something that yields a value that can be stored in a constant or a variable. It is something that goes to the rigth of the equal sign.
         * statement
+    ### switch
+        it is useful when the if else if else conditionals holds strict and somilar ocnditions depending in one single variable.
+
 ## Loops in JS
+    * For:
+        Execute the code inside the curly brackets a certain amount of thimes defined with some rule in the header of the for.
+        for (let i=0; i < 3; i++){
+            console.log(test)
+        }
+    * for of Loops
+       is a shorthand of Foor loop in order to work with elements of an input array defined in the for of header.
+    *for in loops
+        Same as for of but to work with objects and easily query information form the object based on the key values.
+    * while
+        excecute code as log as a conditionis tre
 
 ## Error handling.
+    control structure to handle different circustances typically undered.
+
+    * type of errors:
+        ** User input Error
+            solved by front end and back end validations
+        ** network errors
+            handled by Http error responses
+        ** error handling intentionally that are beyoun our developer control such as network or unkown beheavior of the user or calculation.
+            try catch.
+                allow to create custom errors.
+
+    commit d057aea7fcb5d8d88f6777c541ebef34dded274f

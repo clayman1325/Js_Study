@@ -11,13 +11,29 @@ const LOG_EVENT_MONSTER_ATTACK = "MONSTER_ATTACK";
 const LOG_EVENT_PLAYER_HEAL = "PLAYER_HEAL";
 const LOG_EVENT_GAME_OVER = "GAME_OVER"
 
-const enteredValues = prompt("Enter the value of maximum life for you an the monster", "100");
+let lastLoggedEntry;
 
-let choosenMaxLife = parseInt(enteredValues);
+const choosenMaxLife = getMaxValues()
 
-if (isNaN(choosenMaxLife) || choosenMaxLife <=0){
-  choosenMaxLife = 100
+function getMaxValues() {
+  try {
+    const enteredValues = prompt("Enter the value of maximum life for you an the monster", "100");
+
+    let parsedValue = parseInt(enteredValues);
+    if (isNaN(parsedValue) || parsedValue <=0){
+      throw { message: "Inval max live value it is not a number"}
+    }
+
+    return parsedValue;
+
+  } catch(error) {
+    console.log(error)
+    alert("you entered something wrong the value will be set to 100")
+    return 100
+  }
 }
+
+
 let currentMonsterHealth = choosenMaxLife;
 let currentPlayerHealth  = choosenMaxLife;
 let hasBonusLife = true;
@@ -123,9 +139,13 @@ function showLogHandler () {
   dashes() 
   let i = 1
   for(const element of battleLog) {
-    console.log(i)
-    for(const key in element){
-      console.log(`${key} => ${element[key]}`)
+    if(!lastLoggedEntry && lastLoggedEntry != 0  || lastLoggedEntry == i) {
+      console.log(i)
+      for(const key in element){
+        console.log(`${key} => ${element[key]}`)
+      } 
+      lastLoggedEntry = i +1;
+      break
     }
     i++
   }
@@ -137,7 +157,7 @@ function dashes() {
     console.log("----------------------")
   }
 }
- 
+
 attackBtn.addEventListener("click", attackHandler);
 strongAttackBtn.addEventListener("click", strongAttackHandler);
 healBtn.addEventListener("click", healPlayerHandler);
