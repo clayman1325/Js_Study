@@ -18,4 +18,66 @@
             alert (name)
         <your code>
 
+        1. broswer executes html.
+        2. once the broswer detect one <script> tag it executes it. Details depend in the browser or engine.
+            3. js Parsin and execution with the engine.
+                interpreter load read translate to byte code
+                compiler transcript from byte code to machine code
+            complied machine code goes to the computer
+            Browser has also browser API which are bridges betwein JS and C++ logic build into the browser
+
+        <your code>
+            funcition getName() {
+                return prompt("my name is: ", "")
+            }
+
+            function greet() {
+                const name = getName()
+                 console.log(NAME)
+            }
+
+            greet()
+        <your code>
+
+        How code goes gets executed
+            Inside this Javascript engine (what execute the code)
+            memory allocation storing and retriving data in systems memory.
+                heap
+                the engine registers all code in the heap eventhoug sometimes some pieces of code never gets executed
+            short term organize memory
+            stack (execution stack, CALL STACK)
+                first (anonymois) all the code
+                greet()
+                getName()
+                prompt()
+
+            when a process or a function is excecuted it is removed from the stack is pop of
+
+            The stack ensure the single threath execution.
+
+            Event Loop help with event handling. by adding event listeners (asyncronous call)
+
+            Primitives and Reference values.
+                Primitive values:
+                    strings, booleans, numbers null undefined symbols
+                    Stored in memory (typicaly in stack())
+                    copie a value the value is copied.
+                    primitive values are copied by value
+                Reference values
+                    array objects, all objects
+                    Stored in the heap and variable stores a pointer(address) to location in memory
+                    Copying a variable (= assign to different cariable) Copies a pointer a reference
+
+                Solutions copi primitive values in new variables, dump or use new deconstruction spread operator ... available for arrays and objects
+
+            Garbash collection.
+                it is important to manage the heap otherwise it will overflow
+                V8 garbage collecor
+                    periodically check un used objects if your are not using variables in any place it assing the value to null and later can delete.
+                    Remove un used objects.
+
+                    Memory leaks prevent to populate the memory with unlimited number of gfunctions
+
+                    Be careful to create new functions anytime you run a new event
+
     ### the weird parts
