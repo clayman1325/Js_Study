@@ -1,0 +1,21 @@
+# section 5
+
+## Behind the scenes of Javascript
+    ### es6
+        es5 did a good job in standarization.
+            supoorted in most of the explorers
+        ES6 Modern JS
+          introduce many new features
+          introduce let (block scope or in between {} ) const for variable definition to remove global variables as var
+          cleaner better and faster code.
+          still in development.
+          IT has a strict mode to ensure better practices `use strict` for es6  good practices
+          Hoistiong: JS Engine go to register variables and calls to the beginging of the file.
+
+    ### How JS works
+        <your code>
+            const name = "david"
+            alert (name)
+        <your code>
+
+    ### the weird parts
