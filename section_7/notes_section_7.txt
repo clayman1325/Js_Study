@@ -1,0 +1,60 @@
+# HTML DOM AND JAVASCRIPT
+
+What is is and how to connect HTML with JS.
+
+## Nodes and elements
+    types of objects
+    Query DOM Nodes and transversing the DOM
+    Evaluating and manipulatend nodes
+    How can be add and remove nodes.
+
+## DOM Document object m0del
+
+    ### Javascript (hosted language by JS ENgine and apis)
+        cnst titleEL = document.QuerySelector("h1")
+    ### HTML
+        exposes web api to allow js to work with the parsed document
+          copy the DOM
+        <body>
+            <h1> Welcome </h1>
+        </body>
+        parsed and rendered by the browser
+
+    ### Document
+        Root Dom node
+        provides acces to element quering DOM content
+        Document is a variable containing all the elements and DOM functions
+
+    ### Window
+        the active Browser Window/ tab
+        HOLDS ALL THE NATIVE FUNCTIONS BUILD IN Javascrit to interact wit html
+
+
+    ### the DOM
+        HTML
+        HEAD
+        title
+        BODY
+        HEADER
+        H1
+
+    ### Querying Elements
+        * HTML
+        quaerySelector() getElementById()
+            Return single elements
+            Different wais of quering elements(by CSS Selectors by ID)
+            Direct reference to DOM element is returned.
+        *JS
+        querySelectorAll(),
+        getElementByTagName(),
+            Return cillections of elements arra like NodeList
+            Different Ways of quering elements by Css selectors tag name by css class
+            querySelectorAll returns a non-live NodeList getXByY return live NodeList.
+
+
+    ### Nodes
+        Everithing in HTML that make up the DOM
+        HTML are element nodes
+        text create
+    ### Elements
+
