@@ -1,0 +1,11 @@
+#More on functions
+    Functions allow to re use code and use code on demand
+
+    parameters: Is the definition of the eleemnts that goes into a function and are defininf inside ().
+
+    Arguments: are the concrete values of paramenters in a certain point of time.
+
+    in JS if you compute the typeOf(function() {})  it said the type is function and also if we take a look deeeper with
+    console.dir(function () {}) the output is an object, one special object with precompute data but in the end a function is an object.
+
+    anonumus functions
