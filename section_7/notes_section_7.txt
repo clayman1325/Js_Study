@@ -55,6 +55,28 @@ What is is and how to connect HTML with JS.
     ### Nodes
         Everithing in HTML that make up the DOM
         HTML are element nodes
-        text create
+        text create text Nodes
+        attributes creates attribute nodes.
+
     ### Elements
+        elements are one type of nodes.
+        Special properties and metods to interact wih elements
+
+        when you get an element JS has incorporated most of the CSS properties so it is possible to
+        change style on the fly by altering any of the css property via
+            const h1 = document.getElementById("h1")
+            h1.style.color     = "blue"
+            h1.backgroundColor = "red"
+        also you can manipulate and transform any of the node properties such as text
+            h1.textContent = "David eres un Excellente Software Engineer"
+
+    ### Attributes vs Properties
+        often but not always attributes are mapped to properties.
+        Some attributes has live sync with the properties (js)
+
+        attributes in HTML Code.
+        properties are the mapping of html Attributes in JS object
+
+        <input name="email">
+        obj.propertiy
 
