@@ -78,5 +78,8 @@ What is is and how to connect HTML with JS.
         properties are the mapping of html Attributes in JS object
 
         <input name="email">
-        obj.propertiy
+        input.name
+
+        for instance document.querySelectorAll('li') does not give you a live list it is a Node DS list while:
+        document.getElementsByTagName("li") Does because is a HTMLcollection
 
