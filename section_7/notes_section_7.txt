@@ -83,3 +83,35 @@ What is is and how to connect HTML with JS.
         for instance document.querySelectorAll('li') does not give you a live list it is a Node DS list while:
         document.getElementsByTagName("li") Does because is a HTMLcollection
 
+    ### Children vs child nodes
+        ul.children produce a HTML COllection list.
+        ul.childNodes produce a list of NODEList that containg all the elements of the HTML document.
+
+        it is the difference between child or elementCHild as well.
+
+        using Parent Element or parent Node it happen the same. Elements does not include text elements.
+
+    ### Ancestors and siblings
+        use closest method li,first.closest('body')
+        previeusSibling
+        previousElementSibling
+        nextSibling
+        nextSiblingElement.
+
+    ###Summary
+        Transversal the node with getElements functions only when the relationship is obvious and it will be less
+        likely to change and experience a weird beheavior. Also when the code is easy to read.
+
+    ### styling elements
+        * inline style via style property.
+        * via ClassName
+        *via classList. which is a JS object.
+
+    ### Adding elements
+        There are some methods that allow to inject new elements into the HTML and there are some differences in performas to do it in different ways. On one hand there is innerHTML attribute that can be updated with = opperator and also the methods such as .insertAdjacentHTML, The difference is that with the first one you delete all the elements decendednt to the curren node that is updating its inned HTML and if you are manually apending the prev content like doing  const div.innerHTML = innerHTML + "<p> something </p>" will re render all the prev innerHTML. A better approach will be to use the method .insertAdjacentHTML that will only create the new html element and append to the prev one.
+
+        There is another alternative to create elements and inject them to the HTML code
+
+
+
+

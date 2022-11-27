@@ -21,3 +21,15 @@ const li = document.querySelector("li:last-of-type");
 li.textContent = li.textContent + "Changed !"
 
 const body = document.body;
+const button = document.querySelector("button")
+const ul = document.querySelector('ul')
+ul.style.display = "block";
+
+button.addEventListener("click", () => {
+  const visible = ul.style.display == "block"
+  if(visible == true){
+    ul.style.display = "none";
+    return 
+  }
+  ul.style.display = "block";
+})
