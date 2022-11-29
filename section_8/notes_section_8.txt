@@ -29,3 +29,57 @@ arr.shifth()  shift to the left while unshift shift to the left.
 arr.splice helps to insert element in between element. for delete and insert elements
 arr.splice(0,0, 8,7,6)
 (7) [8, 7, 6, 8, 1, 2, 3]
+
+arr.slice returns a brand new array based on old array elements with is completely new memory address.
+arr.concat does an adition of all the elements of one array into a one brand new arrey.
+
+arr.indexOf(value)
+arrlastIndexOf(value)
+
+arr.find(() => {}) in this case it is useful to look for conditions of the input array values. Find does not creates a copy.
+arr.findWithIndex(() => {})
+
+arr.included() look if it is part of of not of the array
+
+forEach:
+arr.forEach((element, idx, fullArray) => {
+    task with element
+})
+map  returns a brand new array with its new memory.
+arr.map ((element, idx, fullArray) => {
+    task with element
+})
+
+arr.sort
+arr.reverse
+
+arr.filter( () => {
+    return
+})
+where arrow functions shine!
+arr.filter(price => price > 6)
+
+const sum = arr.reduce( (prevValue, currValue, idx, arr) => {
+
+}, initialValue)
+
+reduce an array to a simpler value
+
+## Transform data
+const str = "asdfaafd"
+ str.split("")
+ (8) ['a', 's', 'd', 'f', 'a', 'a', 'f', 'd']
+ const arr = ["david", " ", "mejia"]
+ arr.join(";")
+ david; ;mejia'
+
+ ## The spread Operator
+ th spread operator is an operator that en the end pulls out all the elements in a coma separated list of elements.of an array and returns a list of elements.
+
+ Very usful to populate a new array and copie the arrat.
+
+ ## Array decostructing.
+ const [name, lastName, ..otherInformation] = ["david", "nejia", "male","software engineer"]
+
+ console.log(name, lastname, otherInformation)
+   ( "david" "nejia" ["male","software engineer"])
