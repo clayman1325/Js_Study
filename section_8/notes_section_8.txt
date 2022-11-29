@@ -1,0 +1,31 @@
+# Arrays
+    how to use an manipulate arrays.
+
+## Iterables
+Objects that implement the iterable protocol and have an @@iterator method (i.e Symbol.iterator). More easly objects
+that can be use the for of loop.
+
+## Array a like
+Objects that have length and use indexes.
+
+## Creating arrays:
+const arr = [1]
+const arr = Array.of (1)
+const arr = new Array(1)
+const arr = Array.from("hi")   it is a creation of array from array like objects (similar to split())
+very useful.
+
+
+## what can be stored in arrays
+multiple data types:
+arr = [34, "david", { more_info: {mobile_phone: 3224567889 } }]
+
+## Methods
+arr.push() to insert a  element at the end of the array
+arr.unshioft() insert in the first element
+arr.pop remove elements
+arr.shifth()  shift to the left while unshift shift to the left.
+
+arr.splice helps to insert element in between element. for delete and insert elements
+arr.splice(0,0, 8,7,6)
+(7) [8, 7, 6, 8, 1, 2, 3]
