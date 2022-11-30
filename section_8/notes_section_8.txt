@@ -83,3 +83,50 @@ const str = "asdfaafd"
 
  console.log(name, lastname, otherInformation)
    ( "david" "nejia" ["male","software engineer"])
+
+## Sets
+    * store any kind of nested data
+    * iterable with some special methods
+    * not repeated values allowed.
+
+    methods:
+
+    const ids = new Set(); or new Set ([1,2,3])
+
+    ids.add(elemens)
+    ids.entries retunr a Iterable. and useful to swap a set for a MAP.
+
+    ids.delete(value);
+
+
+## Maps
+    store value data of any kind and  length
+    duplicate keys are not allowed
+    order guarantied and keys are not allowed to be replicated.
+
+    const person = {name: Lorena}
+    const person2  = {name: david}
+
+    const personData = new Map([[person1, [{date: "yesterday, price: 20"}]]])
+
+    methods:
+    personData.get(person1)
+    personData.entries()
+
+    for( const [key, value] of personData.entries()) {
+    }
+
+    for (const key in personData.keys()){
+    }
+    for (cosnt value in personData.values()){
+    }
+
+## Maps vs Objects
+Maps can:
+    use any values and types as keys
+    Better performance for large quantites of data.
+    Better performance for create and removing data.
+
+
+Objescts can:
+    use strings numbers and simbols as keys
