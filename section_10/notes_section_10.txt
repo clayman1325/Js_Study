@@ -1,0 +1,22 @@
+## ObjectOrientedPrograming
+    a way of thinking and reasoing about the code
+
+    code in term of entities.
+        entities that has attributes and properties or methods.
+
+    Product list
+        render products
+        fetch a list of products
+
+
+    product
+        details
+        add to a card
+
+    Shoping cart
+        totals and order the products
+
+    with oop you wrapp and encapsulate the logic that belongs to one entitiy only to they to write more clean and
+    mantainable code.
+
+commit:
