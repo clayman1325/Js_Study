@@ -19,4 +19,28 @@
     with oop you wrapp and encapsulate the logic that belongs to one entitiy only to they to write more clean and
     mantainable code.
 
-commit:
+commit: ea6cadd2d887af10b3e20c4c55a26bc0a8fa184c
+
+## Classes and Instances:
+
+### Classes
+        A class is a blue print for objects
+        define how an object would look like
+
+### Objects
+        ara what we work with code data structures that holds useful information.
+        can be instances of classes.
+
+### static properties and fields
+    static is a reserved word that can prepend a property method or field that will belong to the class and not to the instance level
+
+### when to write classes and object literals are obsolete?
+    object literals are good for:
+        group data,
+        objects that you only create once,
+        quick and ease to create no overhead
+
+    when not
+        greate when needs to be recreated over and over again
+        greate if the creation follows a certain template in properties or functions DRY principle.
+        Easy object duplication
