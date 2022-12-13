@@ -84,6 +84,7 @@ class ProjectItem {
     this.updateProjectListsHandler = updateProjectListsFunction;
     this.connectMoreInfoButton();
     this.connectSwitchButton(type);
+    this.connectDrag();
   }
 
   showMoreInfoHandler() {
@@ -101,6 +102,15 @@ class ProjectItem {
     );
     tooltip.attach();
     this.hasActiveTooltip = true;
+  }
+
+  connectDrag () {
+    const li = document.getElementById(`${this.id}`);
+
+    li.addEventListener("dragstart", event => {
+      event.dataTransfer.setData("text/plain", this.id)
+      event.dataTransfer.effectAllowed = "move";
+    })
   }
 
   connectMoreInfoButton() {
@@ -140,6 +150,7 @@ class ProjectList {
       );
     }
     console.log(this.projects);
+    this.connectDroppable();
   }
 
   setSwitchHandlerFunction(switchHandlerFunction) {
@@ -157,6 +168,43 @@ class ProjectList {
     // this.projects.splice(projectIndex, 1);
     this.switchHandler(this.projects.find(p => p.id === projectId));
     this.projects = this.projects.filter(p => p.id !== projectId);
+  }
+
+  connectDroppable() {
+    const list = document.querySelector(`#${this.type}-projects ul`)
+    console.log(list)
+    list.addEventListener('dragenter', event => {
+      if (event.dataTransfer.types[0] === 'text/plain') {
+        list.parentElement.classList.add('droppable');
+        event.preventDefault();
+      }
+    })
+
+    list.addEventListener('dragover', event => {
+      if (event.dataTransfer.types[0] === 'text/plain') {
+        event.preventDefault();
+      }
+    })
+
+    list.addEventListener('dragleave', event => {
+      if(event.relatedTarget.closest(`#${this.type}-projects ul`) != list) {
+        list.parentElement.classList.remove('droppable');
+      }
+    })
+
+    list.addEventListener('drop', event => {
+      const projectId = event.dataTransfer.getData('text/plain');
+      if (this.projects.find(p => p.id === prjID)) {
+        return;
+      }
+
+      document
+        .getElementById(projectId)
+        .querySelector('button:last-of-type')
+        .click();
+        list.parentElement.classList.remove('dropable');
+        event.preventDefault();
+    })
   }
 }
 
