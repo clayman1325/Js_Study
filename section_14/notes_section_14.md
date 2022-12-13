@@ -50,4 +50,14 @@
 
     it is possible to ezecute those events that are passed in the addEventListener by ourself to trigger the action of those events from code. For example if you want to submit a form once something else happens it is possible to acchive by selecting the submit button in a variable and calling .click()  or selecting the form and appliyng form.submit()
 
+# Drag and drop flow
+
+    Marl elements as draggable
+    listen to dragstart Event
+    accept via drop  via dragenter and dragover event => preventDefault()
+        optional: listen to dragleave Event
+        listen to drop event and upodate data
+            optional listen to dragend Event and update Data Ui
+
+
 
