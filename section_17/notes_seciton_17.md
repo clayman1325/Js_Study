@@ -25,6 +25,11 @@
 
     To make this magic happen an additional queue out side of the JS engine nad the browser is used to store the messages or functions that needs to be executed onece the async function is done. Here is where the event loop comes to play and helps the JS asyncronous operation. the event loop is a constant and repeated loop that is quering for messages in the queue and once the stack JS is free the event loop pushes the event in the queue to the JS stack for get the task done there.
 
+## Promises
+
+    Promises arieses to solve waht is called The callback Hell, and this is a situeation when multiple async functions are nested and there fore is very complicated to keep track of its excecution and the data that is available to keep performing operations. The right order of the execution is very hard to follow in these situations.
+
+    What promises do is to ensure that one async call is perform rigth after another one.
 
 voy a conseguir el trabajo en monarch money
 
