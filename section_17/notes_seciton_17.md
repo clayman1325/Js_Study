@@ -31,6 +31,22 @@
 
     What promises do is to ensure that one async call is perform rigth after another one.
 
+    Interestion methods in proises are:
+
+    Promise.race
+    Pormise.actually
+
+    Promise.all([prom1, prom2, prom3]).then (promisesData => console.log(promisesData))
+
+### Promise chain
+
+    when you have nested asyncronious calls it is better and more organize to create a chain of promises calls that will sequantially beign resolved one after the other with the keyword then of the previos async call and returning a promise in each step of the primisee chain.
+
+
+## Async await
+
+    A modern javascript to write async code. If you prepend the keyword await to a function name definition that function will return a promise, so that when it is called it needs to be resolved as a promisse with the then syntax or another prefix in the function calling named await. Behind the scenes async await is syntactic sugar for promises technique, no more that that
+
 voy a conseguir el trabajo en monarch money
 
 Gracias Dios por que me diste la posibilidad de volver a trabajar en febrero 1 para monarch money. Im exition and im crushing this experience fully focused on perform top performer in this team
